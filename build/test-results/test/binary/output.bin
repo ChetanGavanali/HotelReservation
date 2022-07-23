@@ -1,4 +1,6 @@
-D[Hotels [hotelName=Lakewood, rating=3, Regular Customer Cost=110.0]
-G, Hotels [hotelName=Bridgewood, rating=4, Regular Customer Cost=160.0]
-F, Hotels [hotelName=Ridgewood, rating=5, Regular Customer Cost=220.0]
-]
+[ 
+l Hotel [hotelName=Lakewood, rating=3, weekdayRegularCustomerCost=110.0, weekendRegularCustomerCost=90.0],  
+n Hotel [hotelName=Bridgewood, rating=4, weekdayRegularCustomerCost=150.0, weekendRegularCustomerCost=50.0],  
+m Hotel [hotelName=Ridgewood, rating=5, weekdayRegularCustomerCost=220.0, weekendRegularCustomerCost=150.0]]
+Cheapest Hotel : 
+Lakewood, Total Rates: 200.0

@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.hotelreservation.HotelReservationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-07-23T08:17:34" hostname="DESKTOP-8DEVOGL" time="0.041">
+<testsuite name="com.hotelreservation.HotelReservationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-07-23T08:32:37" hostname="DESKTOP-8DEVOGL" time="0.064">
   <properties/>
-  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelName()" classname="com.hotelreservation.HotelReservationTest" time="0.023"/>
-  <testcase name="givenHotelDetails_WhenValuesEnteredAreCorrect_ShoulReturnTrue()" classname="com.hotelreservation.HotelReservationTest" time="0.005"/>
-  <testcase name="givenHotelDetails_shouldReturnCheapestHotel()" classname="com.hotelreservation.HotelReservationTest" time="0.011"/>
-  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelRegularCustomerCost()" classname="com.hotelreservation.HotelReservationTest" time="0.0"/>
-  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelRating()" classname="com.hotelreservation.HotelReservationTest" time="0.0"/>
-  <system-out><![CDATA[[Hotels [hotelName=Lakewood, rating=3, Regular Customer Cost=110.0]
-, Hotels [hotelName=Bridgewood, rating=4, Regular Customer Cost=160.0]
-, Hotels [hotelName=Ridgewood, rating=5, Regular Customer Cost=220.0]
-]
+  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelWeekdayRegularCustomerCost()" classname="com.hotelreservation.HotelReservationTest" time="0.025"/>
+  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelWeekendRegularCustomerCost()" classname="com.hotelreservation.HotelReservationTest" time="0.0"/>
+  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelName()" classname="com.hotelreservation.HotelReservationTest" time="0.003"/>
+  <testcase name="givenHotelDetails_WhenValuesEnteredAreCorrect_ShoulReturnTrue()" classname="com.hotelreservation.HotelReservationTest" time="0.007"/>
+  <testcase name="givenHotelDetails_shouldReturnCheapestHotel()" classname="com.hotelreservation.HotelReservationTest" time="0.025"/>
+  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelRating()" classname="com.hotelreservation.HotelReservationTest" time="0.002"/>
+  <system-out><![CDATA[[ 
+ Hotel [hotelName=Lakewood, rating=3, weekdayRegularCustomerCost=110.0, weekendRegularCustomerCost=90.0],  
+ Hotel [hotelName=Bridgewood, rating=4, weekdayRegularCustomerCost=150.0, weekendRegularCustomerCost=50.0],  
+ Hotel [hotelName=Ridgewood, rating=5, weekdayRegularCustomerCost=220.0, weekendRegularCustomerCost=150.0]]
+Cheapest Hotel : 
+Lakewood, Total Rates: 200.0
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
