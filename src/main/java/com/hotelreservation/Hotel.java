@@ -1,6 +1,5 @@
 package com.hotelreservation;
 
-
 /**
  *  Class Hotel where we defined the variables
  *
@@ -11,8 +10,9 @@ public class Hotel {
     private double regularCustomerCost;
 
     /**
-     * Parameterized Constructor
-     * Here we will pass the details of the regular customer
+     *  Parameterized Constructor
+     *  Here we will pass the details of the regular customer
+     *
      */
     public Hotel(String hotelName, int rating, double regularCustomerCost) {
         this.hotelName = hotelName;
@@ -20,7 +20,7 @@ public class Hotel {
         this.regularCustomerCost = regularCustomerCost;
     }
 
-    public Hotel() {
+    public Hotel(){
 
     }
 
@@ -50,6 +50,20 @@ public class Hotel {
 
     @Override
     public String toString() {
-        return "Hotels [hotelName=" + hotelName + ", rating=" + rating + ", Regular Customer Cost=" + regularCustomerCost + "]\n";
+        return "Hotels [hotelName=" + hotelName + ", rating=" + rating + ", Regular Customer Cost="+ regularCustomerCost +"]\n";
+    }
+
+    public Object getWeekdayRegularCustomerCost() {
+        return null;
+    }
+
+    public Object getWeekendRegularCustomerCost() {
+        return null;
+    }
+
+    public void setWeekdayRegularCustomerCost(double weekdayRegularCustomerCost) {
+    }
+
+    public void setWeekendRegularCustomerCost(double weekendRegularCustomerCost) {
     }
 }
