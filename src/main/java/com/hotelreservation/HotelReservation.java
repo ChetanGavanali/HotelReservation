@@ -1,55 +1,70 @@
 package com.hotelreservation;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Optional;
 import java.util.Scanner;
 
+/**
+ * We have created this class to add the services of the hotel
+ * [1] In this method we will add the hotel to the ArrayList
+ * [2] To display the hotel name and the details
+ *
+ */
 public class HotelReservation {
+
+    ArrayList<Hotel> hotelList = new ArrayList<Hotel>();
+
     /**
-     * Procedure:-
-     * =============
-     * 1. Created an ArrayList to store the Hotel Details
-     * 2. getting hotel details into temporary object and adding into the array list for testing purposes
-     * 3. getting size of an array list for testing purposes
-     * 4. Main method to pass the details of hotels
+     * [1] In this method we will add the hotel to the ArrayList
+     * @param hotelName - we will pass the hotel name
+     * @param rating - we will pass the rating of the hotel
+     * @param weekDayRateRegular - We will pass the rate of week day for the regular customer
+     * @param weekendRateRegular -  we will pass the weekend rate for the regular customer
+     * @return
      */
+    public void addHotel(String hotelName, int rating, double regularCustomerRate) {
+        Hotel hotel = new Hotel();
+        hotel.setHotelName(hotelName);
+        hotel.setRating(rating);
+        hotel.setRegularCustomerCost(regularCustomerRate);
 
-    /*
-     *  Created an ArrayList to store the Hotel Details
-     */
-    private static ArrayList<HotelDetails> hotelList = new ArrayList<>();
-
-    /*
-     *  getting hotel details into temporary object and adding into the array list for testing purposes
-     */
-    public static void addHotel(String name, int price) {
-        HotelDetails temporary = new HotelDetails(name, price);
-        hotelList.add(temporary);
+        hotelList.add(hotel);
     }
 
-    /*
-     *  getting size of an array list for testing purposes
+    /**
+     * [2] To display the hotel name and the details
      */
-    public static int countNoOfHotels() {
+    public void displayHotel() {
+        System.out.println(hotelList);
+
+    }
+    public int getHotelListSize() {
         return hotelList.size();
     }
 
-    /*
-     *  Main method to pass the details of hotels
-     */
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to Hotel Reservation System");
-
-        for(int i=1; i<=3;i++) {
-            System.out.println("Enter the hotel name : ");
-            String hotelName = sc.next();
-            System.out.println("Enter the Rates : ");
-            int rates = sc.nextInt();
-
-            //Passing user input details into object of a constructor and adding that object to the arraylist
-            HotelDetails list = new HotelDetails(hotelName , rates);
-            hotelList.add(list);
-        }
-        System.out.println("\n\n List of Hotels \n"+hotelList);
+    public void printHotelList() {
+        System.out.println(hotelList);
     }
-}
+
+    public ArrayList<Hotel> getHotelList(){
+        return hotelList;
+    }
+
+    /**
+     * Method to find the cheapest hotel.
+     * In this we are using the ChromoUnit to get the date
+     * Then we are comparing the regular cost of the hotel and finding the cheapest hotel
+     * We are using the min method to get the list of minimum cost.
+     * @param startDate - in this we will pass the entry date to hotel
+     * @param endDate - in this we will pass the exit date from hotel
+     * @return -  we will return the hotel with cheapest rate
+     */
+    public Hotel getCheapestHotel(LocalDate startDate, LocalDate endDate) {
+
+        long numberOfDays = ChronoUnit.DAYS.between(startDate, endDate);
+        Optional<Hotel> sortedHotelList = hotelList.stream().min(Comparator.comparing(Hotel::getRegularCustomerCost));
+        return sortedHotelList.get();
+    }}
