@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.hotelreservation.HotelReservationTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-07-23T08:37:17" hostname="DESKTOP-8DEVOGL" time="0.049">
+<testsuite name="com.hotelreservation.HotelReservationTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-07-23T08:46:57" hostname="DESKTOP-8DEVOGL" time="0.057">
   <properties/>
-  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelWeekdayRegularCustomerCost()" classname="com.hotelreservation.HotelReservationTest" time="0.021"/>
+  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelWeekdayRegularCustomerCost()" classname="com.hotelreservation.HotelReservationTest" time="0.02"/>
   <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelWeekendRegularCustomerCost()" classname="com.hotelreservation.HotelReservationTest" time="0.0"/>
-  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelName()" classname="com.hotelreservation.HotelReservationTest" time="0.003"/>
+  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelName()" classname="com.hotelreservation.HotelReservationTest" time="0.002"/>
   <testcase name="givenHotelDetails_WhenValuesEnteredAreCorrect_ShoulReturnTrue()" classname="com.hotelreservation.HotelReservationTest" time="0.004"/>
-  <testcase name="givenHotelDetails_shouldReturnCheapestHotel()" classname="com.hotelreservation.HotelReservationTest" time="0.016"/>
-  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelRatings()" classname="com.hotelreservation.HotelReservationTest" time="0.0"/>
-  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelRating()" classname="com.hotelreservation.HotelReservationTest" time="0.0"/>
+  <testcase name="givenHotelDetails_WhenHotelPricesAreSame_shouldReturnHighestRatedHotel()" classname="com.hotelreservation.HotelReservationTest" time="0.021"/>
+  <testcase name="givenHotelDetails_shouldReturnCheapestHotel()" classname="com.hotelreservation.HotelReservationTest" time="0.001"/>
+  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelRatings()" classname="com.hotelreservation.HotelReservationTest" time="0.001"/>
+  <testcase name="givenHotelList_WhenAdded_shouldReturnProperHotelRating()" classname="com.hotelreservation.HotelReservationTest" time="0.001"/>
+  <testcase name="givenHotelDetails_shouldReturnHighestRatedHotel()" classname="com.hotelreservation.HotelReservationTest" time="0.001"/>
   <system-out><![CDATA[[ 
  Hotel [hotelName=Lakewood, rating=3, weekdayRegularCustomerCost=110.0, weekendRegularCustomerCost=90.0],  
  Hotel [hotelName=Bridgewood, rating=4, weekdayRegularCustomerCost=150.0, weekendRegularCustomerCost=50.0],  
  Hotel [hotelName=Ridgewood, rating=5, weekdayRegularCustomerCost=220.0, weekendRegularCustomerCost=150.0]]
-Cheapest Hotel : 
+Cheap Hotels : 
+
 Lakewood, Total Rates: 200.0
+Bridgewood, Total Rates: 200.0
+Cheapest Best Rated Hotel : 
+Bridgewood, Total Rates: 200.0
+Cheap Hotels : 
+
+Lakewood, Total Rates: 200.0
+Bridgewood, Total Rates: 200.0
+Best Rated Hotel : 
+Ridgewood, Total Rates: 370.0
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

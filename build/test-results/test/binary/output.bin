@@ -2,5 +2,17 @@
 l Hotel [hotelName=Lakewood, rating=3, weekdayRegularCustomerCost=110.0, weekendRegularCustomerCost=90.0],  
 n Hotel [hotelName=Bridgewood, rating=4, weekdayRegularCustomerCost=150.0, weekendRegularCustomerCost=50.0],  
 m Hotel [hotelName=Ridgewood, rating=5, weekdayRegularCustomerCost=220.0, weekendRegularCustomerCost=150.0]]
-Cheapest Hotel : 
+Cheap Hotels : 
+
 Lakewood, Total Rates: 200.0
+ Bridgewood, Total Rates: 200.0
+Cheapest Best Rated Hotel : 
+ Bridgewood, Total Rates: 200.0
+Cheap Hotels : 
+
+Lakewood, Total Rates: 200.0
+ Bridgewood, Total Rates: 200.0
+
+Best Rated Hotel : 
+
+Ridgewood, Total Rates: 370.0
