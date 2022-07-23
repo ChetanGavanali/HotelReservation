@@ -102,4 +102,7 @@ public class HotelReservation {
         return null;
     }
 
+    public Hotel getCheapestBestRatedHotel(LocalDate startDate, LocalDate endDate) {
+        return null;
+    }
 }
