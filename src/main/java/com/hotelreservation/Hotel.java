@@ -64,5 +64,7 @@ public class Hotel {
     }
 
 
-
+    public Object getWeekdayRewardCustomerCost() {
+        return null;
+    }
 }
