@@ -2,24 +2,27 @@ package com.hotelreservation;
 
 /**
  *  Class Hotel where we defined the variables
- *
  */
 public class Hotel {
     private String hotelName;
     private int rating;
     private double weekdayRegularCustomerCost;
     private double weekendRegularCustomerCost;
+    private double weekdayRewardCustomerCost;
+    private double weekendRewardCustomerCost;
 
     /**
      *  Parameterized Constructor
-     *  Here we will pass the details of the regular customer
-     *  We are also passing the weekDay and weekend rates.
+     *  Here we will pass the details of the regular and reward customer
      */
-    public Hotel(String hotelName, int rating, double weekdayRegularCustomerCost, double weekendRegularCustomerCost) {
+    public Hotel(String hotelName, int rating, double weekdayRegularCustomerCost, double weekendRegularCustomerCost,
+                 double weekdayRewardCustomerCost, double weekendRewardCustomerCost) {
         this.hotelName = hotelName;
         this.rating = rating;
         this.weekdayRegularCustomerCost = weekdayRegularCustomerCost;
         this.weekendRegularCustomerCost = weekendRegularCustomerCost;
+        this.weekdayRewardCustomerCost = weekdayRewardCustomerCost;
+        this.weekendRewardCustomerCost = weekendRewardCustomerCost;
     }
 
     public Hotel() {
@@ -57,14 +60,27 @@ public class Hotel {
         this.weekendRegularCustomerCost = weekendRegularCustomerCost;
     }
 
+    public double getWeekdayRewardCustomerCost() {
+        return weekdayRewardCustomerCost;
+    }
+
+    public void setWeekdayRewardCustomerCost(double weekdayRewardCustomerCost) {
+        this.weekdayRewardCustomerCost = weekdayRewardCustomerCost;
+    }
+
+    public double getWeekendRewardCustomerCost() {
+        return weekendRewardCustomerCost;
+    }
+
+    public void setWeekendRewardCustomerCost(double weekendRewardCustomerCost) {
+        this.weekendRewardCustomerCost = weekendRewardCustomerCost;
+    }
+
     @Override
     public String toString() {
-        return " \n Hotel [hotelName=" + hotelName + ", rating=" + rating + ", weekdayRegularCustomerCost="
-                + weekdayRegularCustomerCost + ", weekendRegularCustomerCost=" + weekendRegularCustomerCost + "]";
+        return "Hotels [hotelName=" + hotelName + ", rating=" + rating + ", Regular Customer WeekDay Cost="
+                + weekdayRegularCustomerCost + "Regular Customer WeekDay Cost=" + weekdayRegularCustomerCost + ", Reward Customer WeekDay Cost="
+                + weekdayRewardCustomerCost + "Reward Customer WeekDay Cost=" + weekendRewardCustomerCost + "]\n";
     }
 
-
-    public Object getWeekdayRewardCustomerCost() {
-        return null;
-    }
 }
